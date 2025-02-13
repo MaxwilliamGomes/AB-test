@@ -1,4 +1,4 @@
-# 🔍 Análise de A/B Test: Decisões Baseadas em Dados para Campanhas de Marketing  
+# 🔍 Análise de A/B Test para Campanhas de Marketing  
 **por [Maxwilliam Gomes](https://www.linkedin.com/in/maxwilliam-gomes-74b01716a/)**  
 [![LinkedIn](https://img.shields.io/badge/-Conectar_no_LinkedIn-%230A66C2)](https://www.linkedin.com/in/maxwilliam-gomes-74b01716a/)
 [![Email](https://img.shields.io/badge/-Enviar_Email-%23EA4335)](mailto:maxwilliamgomes@gmail.com)
