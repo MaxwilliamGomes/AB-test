@@ -1,72 +1,66 @@
-# AB-test
+# 🔍 Análise de A/B Test: Decisões Baseadas em Dados para Campanhas de Marketing  
+**por [Maxwilliam Gomes](https://www.linkedin.com/in/maxwilliam-gomes-74b01716a/)**  
+[![LinkedIn](https://img.shields.io/badge/-Conectar_no_LinkedIn-%230A66C2)](https://www.linkedin.com/in/maxwilliam-gomes-74b01716a/)
+[![Email](https://img.shields.io/badge/-Enviar_Email-%23EA4335)](mailto:maxwilliamgomes@gmail.com)
+[![Análise Completa](https://img.shields.io/badge/-Ver_Análise_Completa-%2300B388)](https://github.com/MaxwilliamGomes/AB-test/blob/main/%5BAB%20Testing%5D%20CTR%20Campaing/%5BAB_Testing%5D_CTR_Campaing.ipynb)
 
-### Background
-Houve uma agência de marketing determinada a otimizar o desempenho de suas campanhas online. Com um objetivo claro em mente e um orçamento limitado, eles se encontraram diante de uma difícil escolha entre duas abordagens criativas para anúncios: a Campanha A e a Campanha B. Ambas as campanhas foram projetadas com o mesmo objetivo e conjunto, diferindo apenas na criação do anúncio. Com um mês de duração para o teste A/B à frente, a equipe está ansiosa para descobrir qual das duas campanhas conquistará o melhor CTR e, assim, orientará a estratégia futura da agência.
+---
 
-### Definição do Problema de Negócios
-O problema de negócios que a agência enfrenta é determinar qual das duas campanhas, Campanha A e Campanha B, gera o melhor CTR (Taxa de Cliques) com o objetivo de otimizar o retorno sobre o investimento em publicidade. Isso é crucial para direcionar recursos e estratégias futuras de marketing e garantir que o desempenho da campanha seja aprimorado.
+## 🚀 **Visão Geral do Projeto**  
+Este projeto de **A/B Test** analisou o desempenho de duas versões de uma campanha de marketing para determinar qual obteve maior **Taxa de Clique (CTR)**. Utilizando **Python e estatística**, identifiquei a versão mais eficaz, gerando insights para otimizar investimentos em marketing e aumentar o ROI.  
 
-KPIs Necessários para a Análise:
-• CTR (Taxa de Cliques): A métrica principal para avaliar o desempenho das campanhas é a Taxa de Cliques, que pode ser calculada dividindo o número de cliques no site pelo número de impressões e multiplicando por 100. Isso ajuda a determinar a eficácia das campanhas em atrair a atenção dos usuários.
+**Resultado Chave:**  
+✅ **Versão B superou a A** com um aumento de **4% no CTR** (p-value < 0.05).  
 
-• Gasto (Spend): O custo total de publicidade investido em cada campanha, ajudando a avaliar a eficiência em termos de retorno sobre o investimento.
 
-• Número de Impressões (Impressions ): Essas métricas fornecem informações sobre a exposição da campanha ao público. Comparar o número de impressões pode ajudar a entender o quão eficaz a campanha é em alcançar seu público-alvo.
+---
 
-Número de Cliques no Site (Website Clicks): É fundamental para determinar o engajamento dos usuários com os anúncios e a campanha.
+## 📌 **Destaques Técnicos**  
+- **Bibliotecas:** Pandas, NumPy, SciPy, Matplotlib, Statsmodels.  
+- **Análise Estatística:** Teste Z, intervalo de confiança, cálculo de p-value.  
+- **Visualização:** Gráficos comparativos (barras, distribuição) para comunicação clara de resultados.  
+- **Reprodutibilidade:** Código modular e documentado para aplicação em outros cenários.  
 
-### Dicionário dos Datasets
-Fonte: https://www.kaggle.com/datasets/amirmotefaker/ab-testing-dataset
+---
 
-Abaixo estão todas as características no conjunto de dados:
+## 📊 **Metodologia**  
+### **Passo a Passo**  
+1. **Coleta e Limpeza de Dados:**  
+   - 2 Dataset com 30 registros de cliques e impressões cada.  
+2. **Análise Estatística:**  
+   - **Teste de Hipótese:** Comparação das médias de CTR entre grupos (Z-test, Teste Qui-Quadrado).  
+   - **Significância:** p-value de **0.05** (resultado estatisticamente significativo).  
+   - **Intervalo de Confiança:** 95% para diferença entre versões.  
+3. **Visualização:**  
+   - Gráficos de barras comparando CTR.  
+   - Distribuição de cliques por grupo.  
 
-• Campaign Name: The name of the campaign
+### 📈 **Resultados Detalhados**  
+| Métrica           | Versão A | Versão B | 
+|-------------------|----------|----------|
+| CTR Médio         | 4.9%     | 8.2%     |  
 
-• Date: Date of the record
 
-• Spend: Amount spent on the campaign in dollars
+---
 
-• of Impressions: Number of impressions the ad crossed through the campaign
+## 🛠️ **Tecnologias Utilizadas**  
+<div align="center">  
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">  
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">  
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib">  
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">  
+</div>  
 
-• Reach: The number of unique impressions received in the ad
+---
 
-• of Website Clicks: Number of website clicks received through the ads
-
-• of Searches: Number of users who performed searches on the website
-
-• of View Content: Number of users who viewed content and products on the website
-
-• of Add to Cart: Number of users who added products to the cart
-
-• of Purchase: Number of purchases
-
-A empresa realizou duas campanhas:
-
-• Control Campaign
-
-• Test Campaign
-
-### Sumário executivo
-Resumo Executivo: Análise A/B para Campanhas Publicitárias (01/08/2019 - 30/08/2019)
-
-Com base nos dados e nas análises realizadas no teste A/B para duas campanhas publicitárias com orçamentos semelhantes, as seguintes conclusões e insights principais foram obtidos:
-
-*Diferenças nas Abordagens Diárias de Investimento:*
-
-• Os grupos de teste e controle implementaram estratégias diárias de investimento distintas, com o grupo de teste apresentando picos mais altos em cliques e uma possível Taxa de Cliques (CTR) superior. Enquanto isso, o grupo de controle exibiu mais flutuações em impressões, buscas e adições ao carrinho. Apesar dessas diferenças, ambos os grupos alcançaram resultados de compra comparáveis.
-
-*Confirmação de Investimento Igual:*
-
-• Apesar das variações observadas no desempenho, é crucial confirmar que o investimento financeiro para ambas as campanhas foi realmente o mesmo.
-
-*Significância Estatística na CTR:*
-
-• O teste A/B analisou especificamente a Taxa de Cliques (CTR) para ambas as campanhas. A análise estatística, com um nível de significância de 0,05, revelou uma diferença significativa na CTR entre os dois grupos. O grupo de teste demonstrou uma CTR substancialmente mais alta, indicando um anúncio mais atrativo.
-
-*Detalhes dos Resultados do Teste A/B:*
-
-• Os resultados do teste A/B mostraram uma diferença estatisticamente significativa nas taxas de cliques entre os grupos de controle e tratamento. O grupo de tratamento, com um aumento de 69,8%, superou o grupo de controle. Os intervalos de confiança também apoiaram essas conclusões.
-
-*Consideração da Discrepância de Investimento:*
-
-• Vale ressaltar que uma avaliação mais precisa teria sido possível se ambos os grupos tivessem seguido o mesmo investimento diário, eliminando possíveis fatores confundidores.
+## 📂 **Estrutura do Repositório**  
+```plaintext
+AB-test/  
+├── dados/                  
+│   ├── raw/               # Dados brutos (CSV)  
+│   └── processed/         # Dados tratados  
+├── notebooks/              
+│   └── [AB_Testing]_CTR_Campaing.ipynb  # Análise completa  
+├── relatorios/            # Gráficos exportados (PNG/PDF)  
+├── requirements.txt       # Dependências  
+└── README.md              # Documentação  
